@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beacon-hunter"
+version = "1.0.0"
+description = "Detecção de beaconing de C2 pela periodicidade das conexões TCP"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sara Vitória Bispo de Souza" }]
+requires-python = ">=3.9"
+dependencies = ["scapy>=2.5", "rich>=13.0"]
+keywords = ["security", "network", "c2", "beaconing", "scapy", "blue-team", "pcap"]
+
+[project.optional-dependencies]
+mysql = ["mysql-connector-python>=8.0"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+beacon-hunter = "beacon_hunter.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Saravtb/beacon-hunter"
+
+[tool.setuptools]
+packages = ["beacon_hunter"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

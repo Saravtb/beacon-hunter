@@ -1,0 +1,22 @@
+# credenciais e configuração local
+.env
+*.env
+
+# capturas e saídas geradas (o pcap de exemplo é a exceção)
+*.pcap
+*.pcapng
+!samples/beacon_sample.pcap
+*.db
+*.json
+*.csv
+*.log
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+venv/
+.venv/
